@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEWURO APPAREL | Trusted Apparel Manufacturing Partner – Sri Lanka</title>
+  <meta name="description" content="DEWURO APPAREL – Premium garment manufacturer in Sri Lanka. CMT, OEM, private label, bulk production, export orders. T-shirts, uniforms, sportswear & more.">
+  <meta name="keywords" content="Sri Lanka apparel manufacturer, garment factory Sri Lanka, CMT manufacturer, OEM clothing manufacturer, uniform manufacturer, T-shirt manufacturer, private label clothing, DEWURO APPAREL">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { DEFAULT: '#C7A368', light: '#e0b979', dark: '#8a7044' },
+            navy: { DEFAULT: '#0a1628', light: '#132240' },
+            bg: { DEFAULT: '#050505', secondary: '#0A0A0A', tertiary: '#0F0F0F' }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #050505; color: #E5E5E5; overflow-x: hidden; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #050505; }
+    ::-webkit-scrollbar-thumb { background: #C7A368; border-radius: 3px; }
+
+    /* Noise texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes pulse-gold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(199,163,104,0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(199,163,104,0); }
+    }
+    @keyframes countUp {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .animate-on-scroll.visible.delay-1 { transition-delay: 0.1s; }
+    .animate-on-scroll.visible.delay-2 { transition-delay: 0.2s; }
+    .animate-on-scroll.visible.delay-3 { transition-delay: 0.3s; }
+    .animate-on-scroll.visible.delay-4 { transition-delay: 0.4s; }
+    .animate-on-scroll.visible.delay-5 { transition-delay: 0.5s; }
+
+    /* Gold gradient text */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #e0b979, #C7A368, #8a7044);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Gold shimmer */
+    .gold-shimmer {
+      background: linear-gradient(90deg, #C7A368 0%, #e0b979 25%, #C7A368 50%, #e0b979 75%, #C7A368 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    /* Hero parallax overlay */
+    .hero-overlay {
+      background: linear-gradient(135deg, rgba(5,5,5,0.85) 0%, rgba(5,5,5,0.6) 40%, rgba(5,5,5,0.8) 100%);
+    }
+
+    /* Section divider */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(199,163,104,0.3), transparent);
+    }
+
+    /* Card hover */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .service-card:hover {
+      border-color: rgba(199,163,104,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .service-card:hover .card-icon {
+      color: #C7A368;
+      transform: scale(1.1);
+    }
+
+    /* Product card */
+    .product-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .product-card:hover img {
+      transform: scale(1.08);
+    }
+    .product-card:hover .product-overlay {
+      opacity: 1;
+    }
+
+    /* Process step */
+    .process-step {
+      transition: all 0.3s ease;
+    }
+    .process-step:hover {
+      transform: translateY(-4px);
+    }
+    .process-step:hover .step-num {
+      background: #C7A368;
+      color: #050505;
+    }
+
+    /* FAQ */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+    }
+    .faq-answer.open {
+      max-height: 500px;
+    }
+    .faq-toggle iconify-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-toggle.active iconify-icon {
+      transform: rotate(45deg);
+    }
+
+    /* Gallery */
+    .gallery-item {
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+      z-index: 10;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    /* Nav link underline */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #C7A368;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Button styles */
+    .btn-primary {
+      background: #C7A368;
+      color: #050505;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .btn-primary:hover {
+      background: #e0b979;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(199,163,104,0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: #E5E5E5;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .btn-secondary:hover {
+      border-color: #C7A368;
+      color: #C7A368;
+      transform: translateY(-2px);
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      animation: pulse-gold 2s infinite;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 100px;
+      right: 24px;
+      z-index: 1001;
+      background: #C7A368;
+      color: #050505;
+      padding: 16px 24px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 14px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Stats counter */
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Quality timeline */
+    .quality-timeline {
+      position: relative;
+    }
+    .quality-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 24px;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, #C7A368, rgba(199,163,104,0.1));
+    }
+    @media (min-width: 768px) {
+      .quality-timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Map container */
+    .map-container {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-content {
+      background: #0F0F0F;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      max-width: 560px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: scale(0.95) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-overlay.active .modal-content {
+      transform: scale(1) translateY(0);
+    }
+
+    /* Input styles */
+    .form-input {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 2px;
+      padding: 14px 16px;
+      color: #E5E5E5;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      width: 100%;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+    .form-input:focus {
+      border-color: #C7A368;
+      box-shadow: 0 0 0 3px rgba(199,163,104,0.1);
+    }
+    .form-input::placeholder {
+      color: #555;
+    }
+
+    /* Gallery lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-[100] transition-all duration-500" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px);">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 border border-gold/40 flex items-center justify-center rounded-sm group-hover:bg-gold/10 transition-colors">
+          <span class="font-serif text-gold font-bold text-lg">D</span>
+        </div>
+        <div>
+          <span class="text-white font-semibold text-sm tracking-[0.15em] uppercase">DEWURO</span>
+          <span class="block text-[9px] tracking-[0.3em] text-gold/70 uppercase">Apparel</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#about" class="nav-link text-xs tracking-[0.12em] uppercase text-neutral-400 hover:text-white transition-colors">About</a>
+        <a href="#services" class="nav-link text-xs tracking-[0.12em] uppercase text-neutral-400 hover:text-white transition-colors">Services</a>
+        <a href="#products" class="nav-link text-xs tracking-[0.12em] uppercase text-neutral-400 hover:text-white transition-colors">Products</a>
+        <a href="#technology" class="nav-link text-xs tracking-[0.12em] uppercase text-neutral-400 hover:text-white transition-colors">Technology</a>
+        <a href="#quality" class="nav-link text-xs tracking-[0.12em] uppercase text-neutral-400 hover:text-white transition-colors">Quality</a>
+        <a href="#gallery" class="nav-link text-xs tracking-[0.12em] uppercase text-neutral-400 hover:text-white transition-colors">Gallery</a>
+        <a href="#contact" class="btn-primary text-[11px] py-3 px-6">Get a Quote</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="menuToggle" class="lg:hidden text-white p-2" aria-label="Menu">
+        <iconify-icon icon="mdi:menu" width="28"></iconify-icon>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-bg-secondary border-l border-white/5 z-[101] p-8 pt-24 lg:hidden">
+      <button id="menuClose" class="absolute top-6 right-6 text-white">
+        <iconify-icon icon="mdi:close" width="28"></iconify-icon>
+      </button>
+      <div class="flex flex-col gap-6">
+        <a href="#about" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">About</a>
+        <a href="#services" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">Services</a>
+        <a href="#products" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">Products</a>
+        <a href="#technology" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">Technology</a>
+        <a href="#quality" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">Quality</a>
+        <a href="#process" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">Process</a>
+        <a href="#gallery" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">Gallery</a>
+        <a href="#faq" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">FAQ</a>
+        <a href="#contact" class="mobile-link text-sm tracking-[0.1em] uppercase text-neutral-400 hover:text-gold transition-colors">Contact</a>
+        <div class="pt-4 border-t border-white/5">
+          <a href="#contact" class="btn-primary text-center justify-center w-full text-[11px]">Request a Quote</a>
+        </div>
+        <div class="flex gap-4 pt-4">
+          <a href="#" class="text-neutral-500 hover:text-gold transition-colors"><iconify-icon icon="mdi:facebook" width="20"></iconify-icon></a>
+          <a href="#" class="text-neutral-500 hover:text-gold transition-colors"><iconify-icon icon="mdi:instagram" width="20"></iconify-icon></a>
+          <a href="#" class="text-neutral-500 hover:text-gold transition-colors"><iconify-icon icon="mdi:linkedin" width="20"></iconify-icon></a>
+          <a href="#" class="text-neutral-500 hover:text-gold transition-colors"><iconify-icon icon="ic:baseline-tiktok" width="20"></iconify-icon></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://picsum.photos/seed/garment-factory-hero/1920/1080.jpg" alt="Garment Factory" class="w-full h-full object-cover" loading="eager">
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+    <!-- Decorative elements -->
+    <div class="absolute top-20 left-10 w-32 h-32 border border-gold/10 rounded-full" style="animation: float 6s ease-in-out infinite;"></div>
+    <div class="absolute bottom-32 right-16 w-20 h-20 border border-gold/5 rounded-full" style="animation: float 8s ease-in-out infinite 2s;"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center" style="animation: fadeInUp 1s ease-out forwards;">
+      <div class="inline-flex items-center gap-2 mb-8 px-5 py-2.5 border border-gold/20 rounded-sm bg-white/[0.02]" style="animation: fadeIn 1s ease-out 0.3s forwards; opacity: 0;">
+        <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80">Sri Lanka's Premium Garment Manufacturer</span>
+      </div>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] tracking-tight mb-8" style="animation: fadeInUp 1s ease-out 0.2s forwards; opacity: 0;">
+        Your Trusted Apparel<br><span class="text-gold-gradient">Manufacturing Partner</span>
+      </h1>
+      <p class="text-neutral-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12" style="animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0;">
+        From Sampling to Bulk Production — High Quality Garment Manufacturing for Local and International Brands.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center" style="animation: fadeInUp 1s ease-out 0.7s forwards; opacity: 0;">
+        <button onclick="openQuoteModal()" class="btn-primary">
+          Request a Quote
+          <iconify-icon icon="mdi:arrow-right" width="16"></iconify-icon>
+        </button>
+        <a href="#contact" class="btn-secondary">
+          Contact Us
+        </a>
+        <a href="#services" class="btn-secondary">
+          Free Consultation
+        </a>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto" style="animation: fadeInUp 1s ease-out 0.9s forwards; opacity: 0;">
+        <div class="text-center">
+          <div class="stat-number text-2xl sm:text-3xl font-bold text-gold" data-count="500">500+</div>
+          <div class="text-[11px] tracking-[0.15em] uppercase text-neutral-500 mt-1">Monthly Capacity</div>
+        </div>
+        <div class="text-center">
+          <div class="stat-number text-2xl sm:text-3xl font-bold text-gold" data-count="50">50+</div>
+          <div class="text-[11px] tracking-[0.15em] uppercase text-neutral-500 mt-1">Skilled Workers</div>
+        </div>
+        <div class="text-center">
+          <div class="stat-number text-2xl sm:text-3xl font-bold text-gold" data-count="15">15+</div>
+          <div class="text-[11px] tracking-[0.15em] uppercase text-neutral-500 mt-1">Years Experience</div>
+        </div>
+        <div class="text-center">
+          <div class="stat-number text-2xl sm:text-3xl font-bold text-gold" data-count="7">7+</div>
+          <div class="text-[11px] tracking-[0.15em] uppercase text-neutral-500 mt-1">Export Markets</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style="animation: fadeIn 1s ease-out 1.2s forwards; opacity: 0;">
+      <span class="text-[10px] tracking-[0.2em] uppercase text-neutral-600">Scroll</span>
+      <div class="w-px h-8 bg-gradient-to-b from-gold/50 to-transparent animate-pulse"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="animate-on-scroll">
+          <div class="relative">
+            <img src="https://picsum.photos/seed/factory-interior-about/700/500.jpg" alt="DEWURO APPAREL Factory" class="w-full h-[400px] md:h-[500px] object-cover rounded-sm" loading="lazy">
+            <div class="absolute -bottom-6 -right-6 w-48 h-48 border border-gold/20 rounded-sm hidden md:block"></div>
+            <div class="absolute top-6 left-6 bg-bg/90 backdrop-blur-sm border border-gold/20 px-5 py-3 rounded-sm">
+              <div class="text-gold font-serif text-2xl font-bold">15+</div>
+              <div class="text-[10px] tracking-[0.15em] uppercase text-neutral-400">Years of Excellence</div>
+            </div>
+          </div>
+        </div>
+        <div class="animate-on-scroll delay-2">
+          <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">About Us</span>
+          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">
+            Crafting Quality Garments<br>Since Day One
+          </h2>
+          <div class="section-divider mb-8"></div>
+          <p class="text-neutral-400 leading-relaxed mb-6">
+            DEWURO APPAREL is a reliable apparel manufacturing company based in Sri Lanka, specializing in quality garment production using modern technology and skilled craftsmanship. Located in Kinigama, Bandarawela, we serve both local and international brands with dedication and precision.
+          </p>
+          <p class="text-neutral-400 leading-relaxed mb-8">
+            Customer satisfaction, quality, and timely delivery are our highest priorities. We believe in building lasting partnerships through transparency, consistent quality, and competitive pricing that helps our clients grow their businesses.
+          </p>
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="flex items-center gap-3">
+              <iconify-icon icon="mdi:check-circle" class="text-gold" width="20"></iconify-icon>
+              <span class="text-sm text-neutral-300">Quality First</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <iconify-icon icon="mdi:check-circle" class="text-gold" width="20"></iconify-icon>
+              <span class="text-sm text-neutral-300">On-Time Delivery</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <iconify-icon icon="mdi:check-circle" class="text-gold" width="20"></iconify-icon>
+              <span class="text-sm text-neutral-300">Modern Technology</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <iconify-icon icon="mdi:check-circle" class="text-gold" width="20"></iconify-icon>
+              <span class="text-sm text-neutral-300">Skilled Workforce</span>
+            </div>
+          </div>
+          <a href="#services" class="btn-primary text-[11px]">
+            Explore Our Services
+            <iconify-icon icon="mdi:arrow-right" width="14"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="py-24 bg-bg-secondary relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gold/[0.02] rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+        <!-- Vision -->
+        <div class="animate-on-scroll p-8 md:p-10 border border-white/5 rounded-sm bg-white/[0.01] hover:border-gold/20 transition-colors duration-500">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 border border-gold/30 rounded-sm flex items-center justify-center bg-gold/5">
+              <iconify-icon icon="mdi:eye-outline" class="text-gold" width="28"></iconify-icon>
+            </div>
+            <h3 class="font-serif text-2xl md:text-3xl text-white">Our Vision</h3>
+          </div>
+          <p class="text-neutral-400 leading-relaxed text-[15px]">
+            "To become one of Sri Lanka's most trusted apparel manufacturing companies, recognized globally for quality, innovation, ethical manufacturing, and customer satisfaction."
+          </p>
+        </div>
+        <!-- Mission -->
+        <div class="animate-on-scroll delay-2 p-8 md:p-10 border border-white/5 rounded-sm bg-white/[0.01] hover:border-gold/20 transition-colors duration-500">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 border border-gold/30 rounded-sm flex items-center justify-center bg-gold/5">
+              <iconify-icon icon="mdi:target" class="text-gold" width="28"></iconify-icon>
+            </div>
+            <h3 class="font-serif text-2xl md:text-3xl text-white">Our Mission</h3>
+          </div>
+          <p class="text-neutral-400 leading-relaxed text-[15px]">
+            "Our mission is to manufacture premium quality garments through modern technology, skilled professionals, strict quality control, and sustainable production while building long-term partnerships with local and international clients."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">What We Offer</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Our Services</h2>
+        <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+          Comprehensive garment manufacturing solutions tailored to meet the diverse needs of brands worldwide.
+        </p>
+      </div>
+      <div id="servicesGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-24 md:py-32 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Our Catalogue</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Products We Manufacture</h2>
+        <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+          From everyday essentials to high-performance sportswear — we produce it all with precision and care.
+        </p>
+      </div>
+      <div id="productsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section id="technology" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="animate-on-scroll">
+          <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Advanced Equipment</span>
+          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">
+            Manufacturing<br>Technology
+          </h2>
+          <div class="section-divider mb-8"></div>
+          <p class="text-neutral-400 leading-relaxed mb-8">
+            We continuously invest in modern garment technology to ensure precision, durability, efficiency, and premium finishing across every product we manufacture.
+          </p>
+          <img src="https://picsum.photos/seed/sewing-machines-tech/700/350.jpg" alt="Manufacturing Technology" class="w-full h-[250px] object-cover rounded-sm border border-white/5" loading="lazy">
+        </div>
+        <div class="animate-on-scroll delay-2">
+          <div id="techGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Assurance Section -->
+  <section id="quality" class="py-24 md:py-32 bg-bg-secondary relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gold/[0.02] rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Quality First</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Quality Assurance</h2>
+        <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+          A rigorous multi-stage quality control process ensuring every garment meets international standards.
+        </p>
+      </div>
+      <div id="qualityTimeline" class="quality-timeline space-y-6 max-w-4xl mx-auto">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Our Advantages</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Why Choose DEWURO APPAREL</h2>
+      </div>
+      <div id="whyGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturing Process -->
+  <section id="process" class="py-24 md:py-32 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">How We Work</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Manufacturing Process</h2>
+        <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+          A streamlined 11-step process from your initial inquiry to final delivery.
+        </p>
+      </div>
+      <div id="processFlow" class="flex flex-wrap justify-center gap-3 md:gap-2">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Export Markets -->
+  <section class="py-24 md:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-bg via-navy/20 to-bg"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Global Reach</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Export Markets</h2>
+        <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+          DEWURO APPAREL is ready to serve customers worldwide. We accept both import and export manufacturing inquiries.
+        </p>
+      </div>
+      <div id="marketsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability -->
+  <section class="py-24 md:py-32 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="animate-on-scroll order-2 md:order-1">
+          <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Responsible Production</span>
+          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">
+            Sustainability &<br>Ethical Practices
+          </h2>
+          <div class="section-divider mb-8"></div>
+          <div id="sustainList" class="space-y-5">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+        <div class="animate-on-scroll delay-2 order-1 md:order-2">
+          <img src="https://picsum.photos/seed/sustainable-factory/700/600.jpg" alt="Sustainable Manufacturing" class="w-full h-[400px] md:h-[500px] object-cover rounded-sm" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Inside Our Facility</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Gallery</h2>
+      </div>
+      <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 md:py-32 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Client Feedback</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">What Our Clients Say</h2>
+      </div>
+      <div id="testimonialsGrid" class="grid md:grid-cols-3 gap-6">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-24 md:py-32">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Got Questions?</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Frequently Asked Questions</h2>
+      </div>
+      <div id="faqList" class="space-y-3">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-20 bg-bg-secondary">
+    <div class="max-w-3xl mx-auto px-6 text-center animate-on-scroll">
+      <iconify-icon icon="mdi:email-outline" class="text-gold/60" width="40"></iconify-icon>
+      <h3 class="font-serif text-2xl md:text-3xl text-white mt-4 mb-4">Stay Updated</h3>
+      <p class="text-neutral-400 mb-8 text-sm">Subscribe to our newsletter for the latest updates on our manufacturing capabilities and industry insights.</p>
+      <form id="newsletterForm" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+        <input type="email" placeholder="Enter your email address" class="form-input flex-1" required>
+        <button type="submit" class="btn-primary whitespace-nowrap text-[11px]">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-[11px] tracking-[0.2em] uppercase text-gold/80 mb-4 block">Get In Touch</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1] tracking-tight mb-6">Contact Us</h2>
+        <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+          Ready to start your next project? Reach out to us for a free consultation and quote.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-12">
+        <!-- Contact Info -->
+        <div class="lg:col-span-2 animate-on-scroll">
+          <div class="space-y-8">
+            <div>
+              <h4 class="text-white font-semibold text-sm tracking-[0.1em] uppercase mb-3">Company Name</h4>
+              <p class="text-neutral-400">DEWURO APPAREL</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold text-sm tracking-[0.1em] uppercase mb-3">Address</h4>
+              <p class="text-neutral-400">Kinigama, Bandarawela,<br>Sri Lanka</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold text-sm tracking-[0.1em] uppercase mb-3">Phone</h4>
+              <div class="space-y-2">
+                <a href="tel:+94706490301" class="flex items-center gap-3 text-neutral-400 hover:text-gold transition-colors">
+                  <iconify-icon icon="mdi:phone" width="18"></iconify-icon>
+                  <span>Sri Lanka: +94 706 490 301</span>
+                </a>
+                <a href="tel:+971525573414" class="flex items-center gap-3 text-neutral-400 hover:text-gold transition-colors">
+                  <iconify-icon icon="mdi:phone" width="18"></iconify-icon>
+                  <span>UAE: +971 52 557 3414</span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold text-sm tracking-[0.1em] uppercase mb-3">WhatsApp</h4>
+              <a href="https://wa.me/94706490301" target="_blank" class="flex items-center gap-3 text-green-400 hover:text-green-300 transition-colors">
+                <iconify-icon icon="mdi:whatsapp" width="22"></iconify-icon>
+                <span>Chat with us on WhatsApp</span>
+              </a>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold text-sm tracking-[0.1em] uppercase mb-3">Follow Us</h4>
+              <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-sm text-neutral-400 hover:text-gold hover:border-gold/30 transition-all"><iconify-icon icon="mdi:facebook" width="18"></iconify-icon></a>
+                <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-sm text-neutral-400 hover:text-gold hover:border-gold/30 transition-all"><iconify-icon icon="mdi:instagram" width="18"></iconify-icon></a>
+                <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-sm text-neutral-400 hover:text-gold hover:border-gold/30 transition-all"><iconify-icon icon="mdi:linkedin" width="18"></iconify-icon></a>
+                <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-sm text-neutral-400 hover:text-gold hover:border-gold/30 transition-all"><iconify-icon icon="ic:baseline-tiktok" width="18"></iconify-icon></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-3 animate-on-scroll delay-2">
+          <form id="contactForm" class="space-y-5 p-8 md:p-10 border border-white/5 rounded-sm bg-white/[0.01]">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="text-[11px] tracking-[0.12em] uppercase text-neutral-500 mb-2 block">Full Name *</label>
+                <input type="text" class="form-input" placeholder="John Smith" required>
+              </div>
+              <div>
+                <label class="text-[11px] tracking-[0.12em] uppercase text-neutral-500 mb-2 block">Company Name</label>
+                <input type="text" class="form-input" placeholder="Your Company">
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="text-[11px] tracking-[0.12em] uppercase text-neutral-500 mb-2 block">Email Address *</label>
+                <input type="email" class="form-input" placeholder="john@company.com" required>
+              </div>
+              <div>
+                <label class="text-[11px] tracking-[0.12em] uppercase text-neutral-500 mb-2 block">Phone Number *</label>
+                <input type="tel" class="form-input" placeholder="+1 234 567 8900" required>
+              </div>
+            </div>
+            <div>
+              <label class="text-[11px] tracking-[0.12em] uppercase text-neutral-500 mb-2 block">Service Required</label>
+              <select class="form-input">
+                <option value="" class="bg-bg-secondary">Select a service</option>
+                <option value="cmt" class="bg-bg-secondary">Cut Make Trim (CMT)</option>
+                <option value="oem" class="bg-bg-secondary">OEM Manufacturing</option>
+                <option value="private-label" class="bg-bg-secondary">Private Label</option>
+                <option value="bulk" class="bg-bg-secondary">Bulk Production</option>
+                <option value="sample" class="bg-bg-secondary">Sample Development</option>
+                <option value="uniform" class="bg-bg-secondary">Uniforms</option>
+                <option value="sportswear" class="bg-bg-secondary">Sportswear</option>
+                <option value="other" class="bg-bg-secondary">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[11px] tracking-[0.12em] uppercase text-neutral-500 mb-2 block">Message *</label>
+              <textarea class="form-input" rows="5" placeholder="Tell us about your project, required quantities, fabrics, timeline..." required></textarea>
+            </div>
+            <div>
+              <label class="text-[11px] tracking-[0.12em] uppercase text-neutral-500 mb-2 block">Attach Files (Tech Pack, Design Sketches)</label>
+              <div class="form-input flex items-center justify-center cursor-pointer hover:border-gold/30 transition-colors relative">
+                <input type="file" id="fileUpload" multiple accept=".pdf,.ai,.dxf,.png,.jpg,.jpeg,.svg" class="absolute inset-0 opacity-0 cursor-pointer">
+                <div class="text-center py-2">
+                  <iconify-icon icon="mdi:cloud-upload-outline" class="text-neutral-500" width="24"></iconify-icon>
+                  <p class="text-neutral-500 text-xs mt-1" id="fileLabel">PDF, AI, DXF, PNG, JPG (Max 10MB)</p>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary w-full justify-center text-[11px]">
+              Send Inquiry
+              <iconify-icon icon="mdi:send" width="14"></iconify-icon>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="mt-16 animate-on-scroll">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31655.89!2d81.0!3d6.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae463d1e5c5e1e1%3A0x6b5e3e7e4c5c5c5c!2sBandarawela%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            width="100%" height="350" style="border:0; filter: invert(0.9) hue-rotate(180deg) brightness(0.8) contrast(1.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
+        <!-- Brand -->
+        <div class="col-span-2 md:col-span-3 lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 border border-gold/40 flex items-center justify-center rounded-sm">
+              <span class="font-serif text-gold font-bold text-lg">D</span>
+            </div>
+            <div>
+              <span class="text-white font-semibold text-sm tracking-[0.15em] uppercase">DEWURO</span>
+              <span class="block text-[9px] tracking-[0.3em] text-gold/70 uppercase">Apparel</span>
+            </div>
+          </div>
+          <p class="text-neutral-500 text-sm leading-relaxed mb-4 max-w-xs">
+            Premium garment manufacturing from Sri Lanka. Quality, reliability, and timely delivery for brands worldwide.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="text-neutral-500 hover:text-gold transition-colors"><iconify-icon icon="mdi:facebook" width="18"></iconify-icon></a>
+            <a href="#" class="text-neutral-500 hover:text-gold transition-colors"><iconify-icon icon="mdi:instagram" width="18"></iconify-icon></a>
+            <a href="#" class="text-neutral-500 hover:text-gold transition-colors"><iconify-icon icon="mdi:linkedin" width="18"></iconify-icon></a>
+            <a href="#" class="text-neutral-500 hover:text-gold transition-colors"><iconify-icon icon="ic:baseline-tiktok" width="18"></iconify-icon></a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-[11px] tracking-[0.15em] uppercase text-gold/80 mb-4">Company</h5>
+          <ul class="space-y-2.5">
+            <li><a href="#about" class="text-sm text-neutral-500 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#quality" class="text-sm text-neutral-500 hover:text-white transition-colors">Quality</a></li>
+            <li><a href="#gallery" class="text-sm text-neutral-500 hover:text-white transition-colors">Gallery</a></li>
+            <li><a href="#contact" class="text-sm text-neutral-500 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-[11px] tracking-[0.15em] uppercase text-gold/80 mb-4">Services</h5>
+          <ul class="space-y-2.5">
+            <li><a href="#services" class="text-sm text-neutral-500 hover:text-white transition-colors">CMT</a></li>
+            <li><a href="#services" class="text-sm text-neutral-500 hover:text-white transition-colors">OEM</a></li>
+            <li><a href="#services" class="text-sm text-neutral-500 hover:text-white transition-colors">Private Label</a></li>
+            <li><a href="#services" class="text-sm text-neutral-500 hover:text-white transition-colors">Bulk Production</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-[11px] tracking-[0.15em] uppercase text-gold/80 mb-4">Products</h5>
+          <ul class="space-y-2.5">
+            <li><a href="#products" class="text-sm text-neutral-500 hover:text-white transition-colors">T-Shirts</a></li>
+            <li><a href="#products" class="text-sm text-neutral-500 hover:text-white transition-colors">Uniforms</a></li>
+            <li><a href="#products" class="text-sm text-neutral-500 hover:text-white transition-colors">Sportswear</a></li>
+            <li><a href="#products" class="text-sm text-neutral-500 hover:text-white transition-colors">Jackets</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-[11px] tracking-[0.15em] uppercase text-gold/80 mb-4">Legal</h5>
+          <ul class="space-y-2.5">
+            <li><a href="#" class="text-sm text-neutral-500 hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-sm text-neutral-500 hover:text-white transition-colors">Terms & Conditions</a></li>
+            <li><a href="#" class="text-sm text-neutral-500 hover:text-white transition-colors">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Certifications placeholder -->
+      <div class="border-t border-white/5 pt-8 mb-8">
+        <div class="flex flex-wrap items-center justify-center gap-8 text-neutral-600">
+          <div class="flex items-center gap-2">
+            <iconify-icon icon="mdi:certificate-outline" width="24"></iconify-icon>
+            <span class="text-xs tracking-[0.1em] uppercase">ISO Standards</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <iconify-icon icon="mdi:shield-check-outline" width="24"></iconify-icon>
+            <span class="text-xs tracking-[0.1em] uppercase">WRAP Compliant</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <iconify-icon icon="mdi:leaf" width="24"></iconify-icon>
+            <span class="text-xs tracking-[0.1em] uppercase">Sustainable</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <iconify-icon icon="mdi:handshake-outline" width="24"></iconify-icon>
+            <span class="text-xs tracking-[0.1em] uppercase">Ethical Manufacturing</span>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-neutral-600 text-xs">&copy; 2025 DEWURO APPAREL. All rights reserved.</p>
+        <p class="text-neutral-700 text-[10px] tracking-wider">Kinigama, Bandarawela, Sri Lanka</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/94706490301?text=Hello%20DEWURO%20APPAREL%2C%20I%20would%20like%20to%20inquire%20about%20your%20garment%20manufacturing%20services." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <iconify-icon icon="mdi:whatsapp" width="32" class="text-white"></iconify-icon>
+  </a>
+
+  <!-- Quote Modal -->
+  <div id="quoteModal" class="modal-overlay">
+    <div class="modal-content p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="font-serif text-2xl text-white">Request a Quote</h3>
+        <button onclick="closeQuoteModal()" class="text-neutral-500 hover:text-white transition-colors">
+          <iconify-icon icon="mdi:close" width="24"></iconify-icon>
+        </button>
+      </div>
+      <form id="quoteForm" class="space-y-4">
+        <input type="text" class="form-input" placeholder="Full Name *" required>
+        <input type="email" class="form-input" placeholder="Email Address *" required>
+        <input type="tel" class="form-input" placeholder="Phone Number *" required>
+        <input type="text" class="form-input" placeholder="Company Name">
+        <select class="form-input">
+          <option value="" class="bg-bg-secondary">Select Service *</option>
+          <option class="bg-bg-secondary">Apparel Manufacturing</option>
+          <option class="bg-bg-secondary">CMT</option>
+          <option class="bg-bg-secondary">OEM Manufacturing</option>
+          <option class="bg-bg-secondary">Private Label</option>
+          <option class="bg-bg-secondary">Bulk Production</option>
+          <option class="bg-bg-secondary">Sample Development</option>
+          <option class="bg-bg-secondary">Uniforms</option>
+          <option class="bg-bg-secondary">Sportswear</option>
+          <option class="bg-bg-secondary">Other</option>
+        </select>
+        <input type="text" class="form-input" placeholder="Estimated Quantity">
+        <textarea class="form-input" rows="4" placeholder="Project Details (fabrics, designs, timeline...) *" required></textarea>
+        <div class="form-input flex items-center justify-center cursor-pointer hover:border-gold/30 transition-colors relative">
+          <input type="file" multiple accept=".pdf,.ai,.dxf,.png,.jpg,.jpeg" class="absolute inset-0 opacity-0 cursor-pointer">
+          <div class="text-center">
+            <iconify-icon icon="mdi:cloud-upload-outline" class="text-neutral-500" width="20"></iconify-icon>
+            <p class="text-neutral-500 text-xs mt-1">Attach Tech Pack / Designs</p>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary w-full justify-center text-[11px]">
+          Submit Quote Request
+          <iconify-icon icon="mdi:send" width="14"></iconify-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="absolute top-6 right-6 text-white/70 hover:text-white z-10" onclick="closeLightbox()">
+      <iconify-icon icon="mdi:close" width="32"></iconify-icon>
+    </button>
+    <img id="lightboxImg" src="" alt="Gallery Image">
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script>
+    // ========== DATA ==========
+    const services = [
+      { icon: 'mdi:factory', name: 'Apparel Manufacturing' },
+      { icon: 'mdi:content-cut', name: 'Cut Make Trim (CMT)' },
+      { icon: 'mdi:needle', name: 'Contract Sewing' },
+      { icon: 'mdi:handshake', name: 'Subcontract Production' },
+      { icon: 'mdi:package-variant-closed', name: 'Bulk Production' },
+      { icon: 'mdi:numeric-1-box-outline', name: 'Small Quantity Orders' },
+      { icon: 'mdi:tshirt-crew-outline', name: 'Sample Development' },
+      { icon: 'mdi:cog-outline', name: 'OEM Manufacturing' },
+      { icon: 'mdi:tag-outline', name: 'Private Label' },
+      { icon: 'mdi:bullhorn-outline', name: 'Promotional Garments' },
+      { icon: 'mdi:school-outline', name: 'School Uniforms' },
+      { icon: 'mdi:briefcase-outline', name: 'Corporate Uniforms' },
+      { icon: 'mdi:run', name: 'Sportswear' },
+      { icon: 'mdi:hanger', name: 'Fashion Wear' },
+      { icon: 'mdi:export', name: 'Export Orders' },
+      { icon: 'mdi:import', name: 'Import Orders' },
+      { icon: 'mdi:iron-outline', name: 'Garment Finishing' },
+      { icon: 'mdi:package-variant', name: 'Packaging' },
+      { icon: 'mdi:clipboard-check-outline', name: 'Quality Inspection' },
+      { icon: 'mdi:texture-box', name: 'Fabric Checking' },
+      { icon: 'mdi:ruler-square', name: 'Pattern Making' },
+      { icon: 'mdi:calendar-check', name: 'Production Planning' },
+      { icon: 'mdi:chat-question-outline', name: 'Garment Consultation' },
+    ];
+
+    const products = [
+      { name: 'T-Shirts', seed: 'tshirt-product' },
+      { name: 'Polo Shirts', seed: 'polo-product' },
+      { name: 'Dress Shirts', seed: 'dress-shirt-product' },
+      { name: 'Casual Shirts', seed: 'casual-shirt-product' },
+      { name: 'Ladies Blouses', seed: 'blouse-product' },
+      { name: 'Shorts', seed: 'shorts-product' },
+      { name: 'Long Pants', seed: 'pants-product' },
+      { name: 'Joggers', seed: 'joggers-product' },
+      { name: 'Bottoms', seed: 'bottoms-product' },
+      { name: 'Jackets', seed: 'jacket-product' },
+      { name: 'Hoodies', seed: 'hoodie-product' },
+      { name: 'Sportswear', seed: 'sportswear-product' },
+      { name: 'Children\'s Wear', seed: 'kids-product' },
+      { name: 'Uniforms', seed: 'uniform-product' },
+      { name: 'Workwear', seed: 'workwear-product' },
+      { name: 'Corporate Apparel', seed: 'corporate-product' },
+      { name: 'Custom Apparel', seed: 'custom-product' },
+      { name: 'Promotional Clothing', seed: 'promo-product' },
+      { name: 'Fashion Garments', seed: 'fashion-product' },
+    ];
+
+    const techItems = [
+      'Industrial Sewing Machines',
+      'Overlock Machines',
+      'Flatlock Machines',
+      'Embroidery Machines',
+      'Collar Attachment Machines',
+      'Button Sewing Machines',
+      'Button Hole Machines',
+      'Bartack Machines',
+      'Steam Press Machines',
+      'Fabric Cutting Machines',
+      'Pattern Making Equipment',
+      'Fabric Inspection Machines',
+      'Thread Trimming Equipment',
+      'Packing & Finishing Equipment',
+    ];
+
+    const qualitySteps = [
+      { title: 'Quality Control', desc: 'Comprehensive QC protocols established before production begins.' },
+      { title: 'Inline Inspection', desc: 'Continuous monitoring during every stage of the sewing process.' },
+      { title: 'Final Inspection', desc: 'Thorough examination of each finished garment against specifications.' },
+      { title: 'Production Supervision', desc: 'Experienced supervisors overseeing each production line.' },
+      { title: 'Quality Audits', desc: 'Regular internal audits to maintain and improve standards.' },
+      { title: 'Measurement Verification', desc: 'Precise measurement checks to ensure size consistency.' },
+      { title: 'Needle Detection', desc: 'Metal detection to guarantee garment safety.' },
+      { title: 'Finishing Inspection', desc: 'Final checks on pressing, labeling, and presentation.' },
+      { title: 'Packing Inspection', desc: 'Verification of packing standards and shipment readiness.' },
+      { title: 'AQL Standards', desc: 'Acceptable Quality Level inspection per international standards.' },
+      { title: 'On-Time Delivery', desc: 'Committed timelines with proactive communication.' },
+      { title: 'Customer Satisfaction', desc: 'Post-delivery follow-up and continuous improvement.' },
+    ];
+
+    const whyChoose = [
+      { icon: 'mdi:account-group-outline', text: 'Professional Team' },
+      { icon: 'mdi:cog', text: 'Modern Machinery' },
+      { icon: 'mdi:currency-usd-off', text: 'Affordable Pricing' },
+      { icon: 'mdi:star-check', text: 'High Quality Standards' },
+      { icon: 'mdi:lightning-bolt', text: 'Fast Turnaround' },
+      { icon: 'mdi:tune-variant', text: 'Flexible Order Quantities' },
+      { icon: 'mdi:earth', text: 'Competitive Export Pricing' },
+      { icon: 'mdi:shield-check', text: 'Reliable Production' },
+      { icon: 'mdi:account-hard-hat', text: 'Experienced Operators' },
+      { icon: 'mdi:clipboard-check', text: 'Strict Quality Control' },
+      { icon: 'mdi:headset', text: 'Excellent Customer Support' },
+      { icon: 'mdi:trophy-outline', text: 'International Standards' },
+      { icon: 'mdi:hand-heart-outline', text: 'Ethical Manufacturing' },
+      { icon: 'mdi:lock-outline', text: 'Design Protection' },
+    ];
+
+    const processSteps = [
+      'Inquiry', 'Quotation', 'Sample Development', 'Approval', 'Fabric Sourcing',
+      'Cutting', 'Sewing', 'Quality Control', 'Finishing', 'Packing', 'Shipping'
+    ];
+
+    const markets = [
+      { name: 'Middle East', icon: 'mdi:mosque' },
+      { name: 'Europe', icon: 'mdi:castle' },
+      { name: 'United Kingdom', icon: 'mdi:clock-outline' },
+      { name: 'Australia', icon: 'mdi:island' },
+      { name: 'Asia', icon: 'mdi:earth' },
+      { name: 'North America', icon: 'mdi:map-marker' },
+      { name: 'Africa', icon: 'mdi:terrain' },
+    ];
+
+    const sustainItems = [
+      { icon: 'mdi:recycle', title: 'Responsible Manufacturing', desc: 'Environmentally conscious production processes that minimize ecological footprint.' },
+      { icon: 'mdi:delete-outline', title: 'Waste Reduction', desc: 'Systematic approach to reducing fabric waste and optimizing material usage.' },
+      { icon: 'mdi:lightning-bolt-outline', title: 'Efficient Production', desc: 'Streamlined workflows that reduce energy consumption and increase output.' },
+      { icon: 'mdi:shield-account-outline', title: 'Worker Safety', desc: 'Safe working conditions with regular training and health programs.' },
+      { icon: 'mdi:scale-balance', title: 'Ethical Business Practices', desc: 'Fair wages, equal opportunities, and transparent business operations.' },
+      { icon: 'mdi:trending-up', title: 'Continuous Improvement', desc: 'Ongoing investment in better technology, skills, and sustainable methods.' },
+    ];
+
+    const galleryItems = [
+      { title: 'Garment Factory', seed: 'factory-overview-gal' },
+      { title: 'Production Line', seed: 'production-line-gal' },
+      { title: 'Industrial Machines', seed: 'industrial-machines-gal' },
+      { title: 'Embroidery', seed: 'embroidery-gal' },
+      { title: 'Workers in Production', seed: 'workers-production-gal' },
+      { title: 'Quality Inspection', seed: 'quality-inspect-gal' },
+      { title: 'Finished Garments', seed: 'finished-garments-gal' },
+      { title: 'Export Ready Cartons', seed: 'export-cartons-gal' },
+    ];
+
+    const testimonials = [
+      {
+        text: "DEWURO APPAREL has been our go-to manufacturing partner for over 3 years. Their quality consistency and communication are outstanding. Every order arrives on time and exceeds expectations.",
+        name: "Ahmed Al Rashid",
+        role: "Brand Director, Dubai",
+        stars: 5
+      },
+      {
+        text: "We switched to DEWURO for our uniform production and the difference was immediate. Better quality, better pricing, and a team that genuinely cares about getting it right.",
+        name: "Sarah Mitchell",
+        role: "Procurement Manager, London",
+        stars: 5
+      },
+      {
+        text: "From sample to bulk, the entire process was seamless. They understood our tech pack perfectly and delivered sportswear that matched our specifications exactly. Highly recommended.",
+        name: "James Park",
+        role: "Founder, Sydney",
+        stars: 5
+      },
+    ];
+
+    const faqs = [
+      {
+        q: "What is your Minimum Order Quantity (MOQ)?",
+        a: "We offer flexible MOQs depending on the product type and complexity. For basic items like T-shirts, we can start from as low as 100 pieces. For more complex garments, MOQ may vary. Contact us with your specific requirements for an accurate quote."
+      },
+      {
+        q: "What is the typical lead time for orders?",
+        a: "Lead time varies based on order quantity and complexity. Sample development typically takes 7-14 days. Bulk production generally ranges from 21-45 days after sample approval and fabric readiness. We always provide a clear timeline with every order."
+      },
+      {
+        q: "How does the sampling process work?",
+        a: "Send us your tech pack, design sketches, or reference samples. Our team will develop samples for your review. We offer free sample development for confirmed bulk orders. Revisions are made until you're fully satisfied before proceeding to production."
+      },
+      {
+        q: "Do you handle international shipping?",
+        a: "Yes, we have extensive experience with international shipping. We handle all export documentation and work with reliable freight forwarders. We ship FOB Colombo or can arrange door-to-door delivery to most destinations worldwide."
+      },
+      {
+        q: "Can you do custom branding and labels?",
+        a: "Absolutely. We offer complete custom branding including custom labels, tags, hangtags, embroidery, screen printing, and custom packaging. Your brand identity is fully protected and we maintain strict confidentiality on all designs."
+      },
+      {
+        q: "What OEM and Private Label services do you offer?",
+        a: "We provide full OEM and private label services — from fabric sourcing and pattern making to finished, branded garments ready for retail. You provide the design; we handle the entire manufacturing process under your brand name."
+      },
+      {
+        q: "What are your payment terms?",
+        a: "Standard payment terms are 30% advance with order and 70% before shipment. For established clients, we can discuss flexible payment arrangements. We accept bank transfers (T/T) and letters of credit (L/C) for larger orders."
+      },
+      {
+        q: "What is your production capacity?",
+        a: "Our facility has the capacity to produce 500+ garments per day depending on the style complexity. We can scale up with advance planning for large seasonal orders. Our modern machinery and skilled workforce ensure consistent output quality."
+      },
+    ];
+
+    // ========== RENDER FUNCTIONS ==========
+
+    // Services
+    const servicesGrid = document.getElementById('servicesGrid');
+    services.forEach((s, i) => {
+      servicesGrid.innerHTML += `
+        <div class="service-card p-5 md:p-6 bg-white/[0.01] rounded-sm animate-on-scroll ${i < 8 ? 'delay-' + (i % 5 + 1) : ''}">
+          <iconify-icon icon="${s.icon}" class="card-icon text-neutral-500 transition-all duration-300" width="28"></iconify-icon>
+          <h4 class="text-sm text-white mt-3 font-medium">${s.name}</h4>
+        </div>
+      `;
+    });
+
+    // Products
+    const productsGrid = document.getElementById('productsGrid');
+    products.forEach((p, i) => {
+      productsGrid.innerHTML += `
+        <div class="product-card rounded-sm border border-white/5 bg-white/[0.01] animate-on-scroll ${i < 5 ? 'delay-' + (i + 1) : ''}">
+          <div class="relative overflow-hidden h-36 md:h-40">
+            <img src="https://picsum.photos/seed/${p.seed}/400/300.jpg" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-700" loading="lazy">
+            <div class="product-overlay absolute inset-0 bg-gold/20 flex items-center justify-center opacity-0 transition-opacity duration-300">
+              <span class="text-white text-xs tracking-[0.1em] uppercase font-medium">View</span>
+            </div>
+          </div>
+          <div class="p-3 md:p-4">
+            <h4 class="text-xs md:text-sm text-white font-medium text-center">${p.name}</h4>
+          </div>
+        </div>
+      `;
+    });
+
+    // Technology
+    const techGrid = document.getElementById('techGrid');
+    techItems.forEach((t, i) => {
+      techGrid.innerHTML += `
+        <div class="flex items-center gap-3 p-3 border border-white/5 rounded-sm hover:border-gold/20 transition-colors animate-on-scroll ${i < 4 ? 'delay-' + (i + 1) : ''}">
+          <iconify-icon icon="mdi:cog-outline" class="text-gold/60 flex-shrink-0" width="18"></iconify-icon>
+          <span class="text-sm text-neutral-300">${t}</span>
+        </div>
+      `;
+    });
+
+    // Quality Timeline
+    const qualityTimeline = document.getElementById('qualityTimeline');
+    qualitySteps.forEach((s, i) => {
+      qualityTimeline.innerHTML += `
+        <div class="quality-timeline-item relative pl-14 md:pl-0 animate-on-scroll ${i < 3 ? 'delay-' + (i + 1) : ''}">
+          <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-bg-secondary border-2 border-gold/40 rounded-full flex items-center justify-center z-10">
+            <span class="text-gold font-serif font-bold text-sm">${String(i + 1).padStart(2, '0')}</span>
+          </div>
+          <div class="md:w-[calc(50%-40px)] ${i % 2 === 0 ? 'md:mr-auto md:pr-0' : 'md:ml-auto md:pl-0'}">
+            <div class="md:hidden absolute left-0 top-0 w-12 h-12 bg-bg-secondary border-2 border-gold/40 rounded-full flex items-center justify-center z-10">
+              <span class="text-gold font-serif font-bold text-xs">${String(i + 1).padStart(2, '0')}</span>
+            </div>
+            <div class="p-5 border border-white/5 rounded-sm bg-white/[0.01] hover:border-gold/20 transition-colors">
+              <h4 class="text-white font-medium text-sm mb-1">${s.title}</h4>
+              <p class="text-neutral-500 text-xs leading-relaxed">${s.desc}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    // Why Choose Us
+    const whyGrid = document.getElementById('whyGrid');
+    whyChoose.forEach((w, i) => {
+      whyGrid.innerHTML += `
+        <div class="service-card p-5 bg-white/[0.01] rounded-sm text-center animate-on-scroll ${i < 4 ? 'delay-' + (i + 1) : ''}">
+          <iconify-icon icon="${w.icon}" class="card-icon text-neutral-500 transition-all duration-300 mx-auto" width="28"></iconify-icon>
+          <h4 class="text-xs text-white mt-3 font-medium">${w.text}</h4>
+        </div>
+      `;
+    });
+
+    // Manufacturing Process
+    const processFlow = document.getElementById('processFlow');
+    processSteps.forEach((step, i) => {
+      processFlow.innerHTML += `
+        <div class="process-step flex flex-col items-center text-center animate-on-scroll ${i < 4 ? 'delay-' + (i + 1) : ''}" style="width: 120px;">
+          <div class="step-num w-12 h-12 border-2 border-gold/40 rounded-full flex items-center justify-center mb-3 transition-all duration-300 bg-bg">
+            <span class="text-gold font-serif font-bold text-sm">${String(i + 1).padStart(2, '0')}</span>
+          </div>
+          <span class="text-xs text-neutral-300 font-medium">${step}</span>
+          ${i < processSteps.length - 1 ? '<iconify-icon icon="mdi:chevron-down" class="text-gold/30 mt-2 hidden md:block" width="20"></iconify-icon>' : ''}
+        </div>
+      `;
+    });
+
+    // Export Markets
+    const marketsGrid = document.getElementById('marketsGrid');
+    markets.forEach((m, i) => {
+      marketsGrid.innerHTML += `
+        <div class="text-center p-6 border border-white/5 rounded-sm hover:border-gold/30 transition-all duration-300 hover:-translate-y-1 animate-on-scroll ${i < 4 ? 'delay-' + (i + 1) : ''}">
+          <iconify-icon icon="${m.icon}" class="text-gold/60 mx-auto mb-3" width="32"></iconify-icon>
+          <h4 class="text-xs text-white font-medium tracking-wide">${m.name}</h4>
+        </div>
+      `;
+    });
+
+    // Sustainability
+    const sustainList = document.getElementById('sustainList');
+    sustainItems.forEach((s, i) => {
+      sustainList.innerHTML += `
+        <div class="flex gap-4 animate-on-scroll ${i < 3 ? 'delay-' + (i + 1) : ''}">
+          <div class="w-10 h-10 border border-gold/20 rounded-sm flex items-center justify-center flex-shrink-0 bg-gold/5">
+            <iconify-icon icon="${s.icon}" class="text-gold" width="20"></iconify-icon>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-medium mb-1">${s.title}</h4>
+            <p class="text-neutral-500 text-xs leading-relaxed">${s.desc}</p>
+          </div>
+        </div>
+      `;
+    });
+
+    // Gallery
+    const galleryGrid = document.getElementById('galleryGrid');
+    galleryItems.forEach((g, i) => {
+      const isLarge = i === 0 || i === 5;
+      galleryGrid.innerHTML += `
+        <div class="gallery-item relative rounded-sm cursor-pointer ${isLarge ? 'col-span-2 row-span-2' : ''} animate-on-scroll ${i < 4 ? 'delay-' + (i + 1) : ''}" onclick="openLightbox('https://picsum.photos/seed/${g.seed}/1200/800.jpg')">
+          <img src="https://picsum.photos/seed/${g.seed}/${isLarge ? '800/600' : '400/400'}.jpg" alt="${g.title}" class="w-full h-full object-cover transition-transform duration-700 ${isLarge ? 'h-64 md:h-full' : 'h-48 md:h-56'}" loading="lazy">
+          <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white text-sm font-medium">${g.title}</span>
+          </div>
+        </div>
+      `;
+    });
+
+    // Testimonials
+    const testimonialsGrid = document.getElementById('testimonialsGrid');
+    testimonials.forEach((t, i) => {
+      let stars = '';
+      for (let j = 0; j < t.stars; j++) {
+        stars += '<iconify-icon icon="mdi:star" class="text-gold" width="16"></iconify-icon>';
+      }
+      testimonialsGrid.innerHTML += `
+        <div class="p-8 border border-white/5 rounded-sm bg-white/[0.01] hover:border-gold/20 transition-colors duration-500 animate-on-scroll delay-${i + 1}">
+          <div class="flex gap-1 mb-4">${stars}</div>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-6 italic">"${t.text}"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center">
+              <span class="text-gold font-serif font-bold text-sm">${t.name.charAt(0)}</span>
+            </div>
+            <div>
+              <div class="text-white text-sm font-medium">${t.name}</div>
+              <div class="text-neutral-500 text-xs">${t.role}</div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    // FAQ
+    const faqList = document.getElementById('faqList');
+    faqs.forEach((f, i) => {
+      faqList.innerHTML += `
+        <div class="border border-white/5 rounded-sm overflow-hidden animate-on-scroll ${i < 3 ? 'delay-' + (i + 1) : ''}">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left hover:bg-white/[0.02] transition-colors" onclick="toggleFaq(this)">
+            <span class="text-white text-sm font-medium pr-4">${f.q}</span>
+            <iconify-icon icon="mdi:plus" width="20" class="text-gold flex-shrink-0"></iconify-icon>
+          </button>
+          <div class="faq-answer px-5">
+            <p class="text-neutral-400 text-sm leading-relaxed pb-5">${f.a}</p>
+          </div>
+        </div>
+      `;
+    });
+
+    // ========== INTERACTIONS ==========
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
+    menuClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > 100) {
+        navbar.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+        navbar.style.background = 'rgba(5,5,5,0.95)';
+      } else {
+        navbar.style.borderBottom = 'none';
+        navbar.style.background = 'rgba(5,5,5,0.8)';
+      }
+      lastScroll = currentScroll;
+    });
+
+    // FAQ toggle
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-toggle').forEach(t => t.classList.remove('active'));
+
+      if (!isOpen) {
+        answer.classList.add('open');
+        btn.classList.add('active');
+      }
+    }
+
+    // Quote Modal
+    function openQuoteModal() {
+      document.getElementById('quoteModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeQuoteModal() {
+      document.getElementById('quoteModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('quoteModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('quoteModal')) closeQuoteModal();
+    });
+
+    // Lightbox
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeQuoteModal();
+      }
+    });
+
+    // Toast
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    // Form submissions
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Thank you! Your inquiry has been sent successfully.');
+      e.target.reset();
+      document.getElementById('fileLabel').textContent = 'PDF, AI, DXF, PNG, JPG (Max 10MB)';
+    });
+
+    document.getElementById('quoteForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Quote request submitted! We\'ll contact you within 24 hours.');
+      e.target.reset();
+      setTimeout(closeQuoteModal, 1000);
+    });
+
+    document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Successfully subscribed to our newsletter!');
+      e.target.reset();
+    });
+
+    // File upload label
+    document.getElementById('fileUpload').addEventListener('change', function() {
+      const label = document.getElementById('fileLabel');
+      if (this.files.length > 0) {
+        const names = Array.from(this.files).map(f => f.name).join(', ');
+        label.textContent = names.length > 40 ? names.substring(0, 40) + '...' : names;
+        label.style.color = '#C7A368';
+      } else {
+        label.textContent = 'PDF, AI, DXF, PNG, JPG (Max 10MB)';
+        label.style.color = '';
+      }
+    });
+
+    // Scroll animation observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const pos = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: pos, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
